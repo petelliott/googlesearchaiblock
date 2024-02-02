@@ -21,6 +21,8 @@ const query_xpath = (query, node) => {
     return nodes;
 }
 
+var total_removed_count = 0;
+
 const remove_ai_images = (node) => {
     console.log("beginning AI image sweep");
     for (const site of banned_sites) {
@@ -32,7 +34,17 @@ const remove_ai_images = (node) => {
         if (nodes.length > 0) {
             console.log("removed "+nodes.length+" AI images from "+site);
         }
+
+        total_removed_count += nodes.length;
     }
+
+    // this is where we would update the badge if we weren't lazy
+    /*
+    if (total_removed_count > 0) {
+        console.log(chrome);
+        browser.browserAction.setBadgeText({text: total_removed_count.toString()});
+    }
+    */
 };
 
 const observe_new_images = (mutations) => {
