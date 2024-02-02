@@ -29,7 +29,9 @@ const remove_ai_images = (node) => {
         for (const node of nodes) {
             node.parentNode.parentNode.parentNode.remove();
         }
-        console.log("removed "+nodes.length+" AI images from "+site);
+        if (nodes.length > 0) {
+            console.log("removed "+nodes.length+" AI images from "+site);
+        }
     }
 };
 
