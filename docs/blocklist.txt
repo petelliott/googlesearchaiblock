@@ -1,0 +1,10 @@
+# block list based on page title on google images
+Prompt Hunt
+OpenArt
+KREA
+ArtHub.ai
+Playground AI
+NightCafe Creator
+Craiyon
+Freepik
+ArtHub.ai
